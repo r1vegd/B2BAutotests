@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="smokeB2B" parallel="tests">
+
+    <test name="smokeTest">
+        <classes>
+            <class name="tests.AdminSmokeTests"/>
+            <class name="tests.CustomerSmokeTests"/>
+            <class name="tests.VendorSmokeTests"/>
+        </classes>
+    </test>
+
+<!--    <test name="test 2">-->
+<!--        <classes>-->
+<!--&lt;!&ndash;            <class name="tests.ProductsCriticalPathTest"/>&ndash;&gt;-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
