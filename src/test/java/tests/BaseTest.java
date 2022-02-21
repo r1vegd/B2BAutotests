@@ -8,17 +8,19 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import pages.LoginPage;
 import pages.adminPages.*;
 import pages.customerPages.*;
 import pages.vendorPages.*;
 import utils.PropertyReader;
+import utils.TestListener;
 
 
 import java.util.concurrent.TimeUnit;
 
-
-public class BaseTest {
+@Listeners(TestListener.class)
+public abstract class BaseTest {
 
     WebDriver driver;
     protected LoginPage loginPage;
