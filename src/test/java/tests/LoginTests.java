@@ -27,14 +27,14 @@ public class LoginTests extends BaseTest {
 //        assertTrue(isHomePageOpened, "Invalid login");
 //    }
 
-//    @Test(dataProvider = "loginData")
-//    public void allTypesUsersAuth(String username, String password) {
-//        boolean isHomePageOpened = loginPage
-//                .open()
-//                .login(username, password)
-//                .isPageOpen();
-//        assertTrue(isHomePageOpened, "Invalid login");
-//    }
+    @Test(dataProvider = "loginData")
+    public void allTypesUsersAuth(String username, String password) {
+        boolean isHomePageOpened = loginPage
+                .open()
+                .login(username, password)
+                .isPageOpen();
+        assertTrue(isHomePageOpened, "Invalid login");
+    }
 
 //    @Test
 //        public void forgotPassword() {
