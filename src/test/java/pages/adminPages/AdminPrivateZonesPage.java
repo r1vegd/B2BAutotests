@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminPrivateZonesPage extends BasePage {
@@ -19,6 +20,7 @@ public class AdminPrivateZonesPage extends BasePage {
 
     public AdminPrivateZonesPage clickPrivateZones() {
         driver.findElement(PRIVATE_ZONES_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(CREATE_ZONE_BUTTON));
         return new AdminPrivateZonesPage(driver);
     }
 

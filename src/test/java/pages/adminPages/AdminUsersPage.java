@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminUsersPage extends BasePage {
@@ -21,6 +22,7 @@ public class AdminUsersPage extends BasePage {
     public AdminUsersPage clickUsers() {
         driver.findElement(USERS_ADMIN_SIDE_MENU_BUTTON).click();
         driver.findElement(USER_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(CREATE_USER_BUTTON));
         return new AdminUsersPage(driver);
     }
 

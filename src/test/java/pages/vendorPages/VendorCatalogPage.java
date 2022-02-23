@@ -2,6 +2,7 @@ package pages.vendorPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class VendorCatalogPage extends BasePage {
@@ -19,6 +20,7 @@ public class VendorCatalogPage extends BasePage {
 
     public VendorCatalogPage clickVendorCatalog() {
         driver.findElement(CATALOG_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(DOWNLOAD_UPLOAD_PRODUCTS_BUTTON));
         return new VendorCatalogPage(driver);
     }
 

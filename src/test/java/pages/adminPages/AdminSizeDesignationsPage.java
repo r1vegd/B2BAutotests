@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminSizeDesignationsPage extends BasePage {
@@ -19,6 +20,7 @@ public class AdminSizeDesignationsPage extends BasePage {
 
     public AdminSizeDesignationsPage clickSizeDesignations() {
         driver.findElement(SIZE_DESIGNATIONS_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_SIZE_DESIGNATIONS_BUTTON));
         return new AdminSizeDesignationsPage(driver);
     }
 

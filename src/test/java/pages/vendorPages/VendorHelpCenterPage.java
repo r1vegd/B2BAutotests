@@ -2,6 +2,7 @@ package pages.vendorPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class VendorHelpCenterPage extends BasePage {
@@ -19,6 +20,7 @@ public class VendorHelpCenterPage extends BasePage {
 
     public VendorHelpCenterPage clickHelpCenter() {
         driver.findElement(HELP_CENTER_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(SEARCH_HELP_CENTER_INPUT));
         return new VendorHelpCenterPage(driver);
     }
 

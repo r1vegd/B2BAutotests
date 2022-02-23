@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminMeasurementUnitsPage extends BasePage {
@@ -22,6 +23,7 @@ public class AdminMeasurementUnitsPage extends BasePage {
     public AdminMeasurementUnitsPage clickMeasurementUnits() {
         driver.findElement(CLASSIFICATION_ADMIN_SIDE_MENU_BUTTON).click();
         driver.findElement(MEASUREMENT_UNITS_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_UNIT_BUTTON));
         return new AdminMeasurementUnitsPage(driver);
     }
 

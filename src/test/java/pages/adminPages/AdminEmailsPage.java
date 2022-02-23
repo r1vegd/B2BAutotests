@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminEmailsPage extends BasePage {
@@ -21,6 +22,7 @@ public class AdminEmailsPage extends BasePage {
     public AdminEmailsPage clickEmails() {
         driver.findElement(LOCALIZATION_ADMIN_SIDE_MENU_BUTTON).click();
         driver.findElement(EMAILS_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(EMAILS_SEARCH_INPUT));
         return new AdminEmailsPage(driver);
     }
 

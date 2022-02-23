@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminPermissionsPage extends BasePage {
@@ -21,6 +22,7 @@ public class AdminPermissionsPage extends BasePage {
     public AdminPermissionsPage clickPermissions() {
         driver.findElement(USERS_ADMIN_SIDE_MENU_BUTTON).click();
         driver.findElement(PERMISSIONS_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_PERMISSION_BUTTON));
         return new AdminPermissionsPage(driver);
     }
 

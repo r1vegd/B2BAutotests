@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminRelationsPage extends BasePage {
@@ -22,6 +23,7 @@ public class AdminRelationsPage extends BasePage {
     public AdminRelationsPage clickRelations() {
         driver.findElement(CLASSIFICATION_ADMIN_SIDE_MENU_BUTTON).click();
         driver.findElement(RELATIONS_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_RELATIONS_BUTTON));
         return new AdminRelationsPage(driver);
     }
 

@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminCategoriesPage extends BasePage {
@@ -21,6 +22,7 @@ public class AdminCategoriesPage extends BasePage {
     public AdminCategoriesPage clickCategories() {
         driver.findElement(CLASSIFICATION_ADMIN_SIDE_MENU_BUTTON).click();
         driver.findElement(CATEGORIES_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_CATEGORY_BUTTON));
         return new AdminCategoriesPage(driver);
     }
 

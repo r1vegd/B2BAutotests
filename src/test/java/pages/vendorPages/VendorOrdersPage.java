@@ -2,6 +2,7 @@ package pages.vendorPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class VendorOrdersPage extends BasePage {
@@ -21,6 +22,7 @@ public class VendorOrdersPage extends BasePage {
     public VendorOrdersPage clickOrders() {
         driver.findElement(PREORDERS_AND_ORDERS_VENDOR_SIDE_MENU_BUTTON).click();
         driver.findElement(ORDERS_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(ORDERS_SHOW_BY));
         return new VendorOrdersPage(driver);
     }
 

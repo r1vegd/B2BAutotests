@@ -2,6 +2,7 @@ package pages.vendorPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class VendorArchivedStandsPage extends BasePage {
@@ -21,6 +22,7 @@ public class VendorArchivedStandsPage extends BasePage {
     public VendorArchivedStandsPage clickArchivedStands() {
         driver.findElement(STANDS_VENDOR_SIDE_MENU_BUTTON).click();
         driver.findElement(ARCHIVED_STANDS_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(SEARCH_ARCHIVED_STANDS));
         return new VendorArchivedStandsPage(driver);
     }
 

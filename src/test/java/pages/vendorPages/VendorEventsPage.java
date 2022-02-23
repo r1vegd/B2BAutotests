@@ -2,6 +2,7 @@ package pages.vendorPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class VendorEventsPage extends BasePage {
@@ -19,6 +20,7 @@ public class VendorEventsPage extends BasePage {
 
     public VendorContactsPage clickEvents() {
         driver.findElement(EVENTS_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(SEARCH_EVENTS_INPUT));
         return new VendorContactsPage(driver);
     }
 

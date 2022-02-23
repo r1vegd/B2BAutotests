@@ -2,6 +2,7 @@ package pages.vendorPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class VendorWarehousePage extends BasePage {
@@ -19,6 +20,7 @@ public class VendorWarehousePage extends BasePage {
 
     public VendorWarehousePage clickWarehouses() {
         driver.findElement(WAREHOUSES_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(CREATE_WAREHOUSE_BUTTON));
         return new VendorWarehousePage(driver);
     }
 

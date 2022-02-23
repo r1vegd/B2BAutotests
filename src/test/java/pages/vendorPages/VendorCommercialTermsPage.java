@@ -2,6 +2,7 @@ package pages.vendorPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class VendorCommercialTermsPage extends BasePage {
@@ -21,6 +22,7 @@ public class VendorCommercialTermsPage extends BasePage {
     public VendorCommercialTermsPage clickCommercialTerms() {
         driver.findElement(MY_ORGANIZATION_VENDOR_SIDE_MENU_BUTTON).click();
         driver.findElement(COMMERCIAL_TERMS_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(SAVE_COMMERCIAL_TERMS_BUTTON));
         return new VendorCommercialTermsPage(driver);
     }
 

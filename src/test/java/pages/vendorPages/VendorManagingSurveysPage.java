@@ -2,6 +2,7 @@ package pages.vendorPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class VendorManagingSurveysPage extends BasePage {
@@ -21,6 +22,7 @@ public class VendorManagingSurveysPage extends BasePage {
     public VendorManagingSurveysPage clickManagingSurvey() {
         driver.findElement(SURVEY_MAIN_VENDOR_SIDE_MENU_BUTTON).click();
         driver.findElement(MANAGING_SURVEY_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_NEW_SURVEY_BUTTON));
         return new VendorManagingSurveysPage(driver);
     }
 

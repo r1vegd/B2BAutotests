@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminCountriesPage extends BasePage {
@@ -19,6 +20,7 @@ public class AdminCountriesPage extends BasePage {
 
     public AdminCountriesPage clickCountries() {
         driver.findElement(COUNTRIES_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_COUNTRY_BUTTON));
         return new AdminCountriesPage(driver);
     }
 

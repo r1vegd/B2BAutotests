@@ -2,6 +2,7 @@ package pages.vendorPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class VendorPricesPage extends BasePage {
@@ -21,6 +22,7 @@ public class VendorPricesPage extends BasePage {
     public VendorPricesPage clickPrices() {
         driver.findElement(PRICES_AND_DISCOUNTS_VENDOR_SIDE_MENU_BUTTON).click();
         driver.findElement(PRICES_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_PRICE_LIST_BUTTON));
         return new VendorPricesPage(driver);
     }
 

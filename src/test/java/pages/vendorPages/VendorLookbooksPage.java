@@ -2,6 +2,7 @@ package pages.vendorPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class VendorLookbooksPage extends BasePage {
@@ -21,6 +22,7 @@ public class VendorLookbooksPage extends BasePage {
     public VendorLookbooksPage clickLookbooks() {
         driver.findElement(LANDING_VENDOR_SIDE_MENU_BUTTON).click();
         driver.findElement(LOOKBOOK_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_LOOKBOOK_BUTTON));
         return new VendorLookbooksPage(driver);
     }
 

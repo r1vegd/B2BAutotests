@@ -2,6 +2,7 @@ package pages.vendorPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class VendorRolesPage extends BasePage {
@@ -21,6 +22,7 @@ public class VendorRolesPage extends BasePage {
     public VendorRolesPage clickRoles() {
         driver.findElement(MY_ORGANIZATION_VENDOR_SIDE_MENU_BUTTON).click();
         driver.findElement(ROLES_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_ROLE_BUTTON));
         return new VendorRolesPage(driver);
     }
 

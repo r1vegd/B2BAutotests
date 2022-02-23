@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminEventsPage extends BasePage {
@@ -19,6 +20,7 @@ public class AdminEventsPage extends BasePage {
 
     public AdminEventsPage clickEvents() {
         driver.findElement(EVENTS_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_EVENT_BUTTON));
         return new AdminEventsPage(driver);
     }
 

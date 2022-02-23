@@ -2,6 +2,7 @@ package pages.customerPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class CustomerStandsPage extends BasePage {
@@ -19,7 +20,7 @@ public class CustomerStandsPage extends BasePage {
 
     public CustomerStandsPage clickStands() {
         driver.findElement(STANDS_CUSTOMER_SIDE_MENU_BUTTON).click();
-
+        wait.until(ExpectedConditions.visibilityOfElementLocated(STAND_SEARCH_INPUT));
         return new CustomerStandsPage(driver);
     }
 

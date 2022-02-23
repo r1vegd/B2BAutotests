@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminIndustriesPage extends BasePage {
@@ -21,6 +22,7 @@ public class AdminIndustriesPage extends BasePage {
     public AdminIndustriesPage clickIndustries() {
         driver.findElement(CLASSIFICATION_ADMIN_SIDE_MENU_BUTTON).click();
         driver.findElement(INDUSTRIES_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_INDUSTRY_BUTTON));
         return new AdminIndustriesPage(driver);
     }
 

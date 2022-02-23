@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminHelpCenterPage extends BasePage {
@@ -19,6 +20,7 @@ public class AdminHelpCenterPage extends BasePage {
 
     public AdminHelpCenterPage clickHelpCenter() {
         driver.findElement(HELP_CENTER_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(HELP_CENTER_INPUT));
         return new AdminHelpCenterPage(driver);
     }
 

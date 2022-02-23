@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminClassifiersPage extends BasePage {
@@ -21,6 +22,7 @@ public class AdminClassifiersPage extends BasePage {
     public AdminClassifiersPage clickClassifier() {
         driver.findElement(LOCALIZATION_ADMIN_SIDE_MENU_BUTTON).click();
         driver.findElement(CLASSIFIER_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(CLASSIFIER_SEARCH_INPUT));
         return new AdminClassifiersPage(driver);
     }
 
