@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminApplicationsPage extends BasePage {
@@ -21,6 +22,7 @@ public class AdminApplicationsPage extends BasePage {
     public AdminApplicationsPage clickApplicationsRegistration() {
         driver.findElement(APPLICATION_ADMIN_SIDE_MENU_BUTTON).click();
         driver.findElement(REGISTRATION_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(SEARCH_BY_INPUT));
         return new AdminApplicationsPage(driver);
     }
 

@@ -40,10 +40,13 @@ public class LoginPage extends BasePage {
 
     @Step("Login as user '{userName}' use password '{password}'")
     public LoginPage login(String userName, String password) {
-        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(USERNAME_INPUT));
+        wait.until(ExpectedConditions.elementToBeClickable(USERNAME_INPUT));
         driver.findElement(USERNAME_INPUT).sendKeys(userName);
+        wait.until(ExpectedConditions.elementToBeClickable(PASSWORD_INPUT));
         driver.findElement(PASSWORD_INPUT).sendKeys(password);
+        wait.until(ExpectedConditions.elementToBeClickable(LOGIN_BUTTON));
         driver.findElement(LOGIN_BUTTON).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SIDE_MENU_LOGO));
         return new LoginPage(driver);
     }
 

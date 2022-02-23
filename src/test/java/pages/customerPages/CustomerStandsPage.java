@@ -19,6 +19,7 @@ public class CustomerStandsPage extends BasePage {
 
     public CustomerStandsPage clickStands() {
         driver.findElement(STANDS_CUSTOMER_SIDE_MENU_BUTTON).click();
+
         return new CustomerStandsPage(driver);
     }
 

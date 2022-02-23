@@ -2,6 +2,7 @@ package pages.customerPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class CustomerOrdersPage extends BasePage {
@@ -21,6 +22,7 @@ public class CustomerOrdersPage extends BasePage {
     public CustomerOrdersPage clickOrders() {
         driver.findElement(PREORDERS_AND_ORDERS_CUSTOMER_SIDE_MENU_BUTTON).click();
         driver.findElement(ORDERS_CUSTOMER_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(ORDERS_TITLE));
         return new CustomerOrdersPage(driver);
     }
 

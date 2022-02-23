@@ -2,6 +2,7 @@ package pages.customerPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class CustomerRolesPage extends BasePage {
@@ -21,6 +22,7 @@ public class CustomerRolesPage extends BasePage {
     public CustomerRolesPage clickRoles() {
         driver.findElement(MY_ORGANIZATION_CUSTOMER_SIDE_MENU_BUTTON).click();
         driver.findElement(ROLES_CUSTOMER_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(DEFAULT_ROLES_TITLE));
         return new CustomerRolesPage(driver);
     }
 

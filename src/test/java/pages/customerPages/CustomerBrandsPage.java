@@ -2,6 +2,7 @@ package pages.customerPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class CustomerBrandsPage extends BasePage {
@@ -19,6 +20,7 @@ public class CustomerBrandsPage extends BasePage {
 
     public CustomerBrandsPage clickBrands() {
         driver.findElement(BRANDS_CUSTOMER_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(BRAND_SEARCH_INPUT));
         return new CustomerBrandsPage(driver);
     }
 

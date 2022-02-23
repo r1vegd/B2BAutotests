@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminCatalogPage extends BasePage {
@@ -19,6 +20,7 @@ public class AdminCatalogPage extends BasePage {
 
     public AdminCatalogPage clickCatalog() {
         driver.findElement(CATALOG_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(SELECT_ALL_BUTTON));
         return new AdminCatalogPage(driver);
     }
 

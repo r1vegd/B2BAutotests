@@ -2,6 +2,7 @@ package pages.adminPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class AdminBrandsPage extends BasePage {
@@ -19,6 +20,7 @@ public class AdminBrandsPage extends BasePage {
 
     public AdminBrandsPage clickBrands() {
         driver.findElement(BRANDS_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ADD_BRANDS_BUTTON));
         return new AdminBrandsPage(driver);
     }
 
