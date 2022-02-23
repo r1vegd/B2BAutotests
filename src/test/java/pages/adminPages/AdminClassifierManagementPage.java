@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 
 public class AdminClassifierManagementPage extends BasePage {
-    public static final By CLASSIFIER_MANAGEMENT_ADMIN_SIDE_MENU_BUTTON = By.xpath("(//div[@class='nav-link__text'])[9]");
+    public static final By FIRST_CATEGORY_IMPORT_BUTTON = By.xpath("(//i[@class='fa fa-download'])[1]");
     public static final By IMPORT_BUTTON = By.xpath("//div[@class='icon-tool_text fa fa-add']");
 
     public AdminClassifierManagementPage(WebDriver driver) {
@@ -18,7 +18,7 @@ public class AdminClassifierManagementPage extends BasePage {
     }
 
     public AdminClassifierManagementPage clickClassifierManagement() {
-        driver.findElement(CLASSIFIER_MANAGEMENT_ADMIN_SIDE_MENU_BUTTON).click();
+        driver.findElement(FIRST_CATEGORY_IMPORT_BUTTON).click();
         return new AdminClassifierManagementPage(driver);
     }
 
