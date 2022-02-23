@@ -21,6 +21,7 @@ public class CustomerRolesPage extends BasePage {
 
     public CustomerRolesPage clickRoles() {
         driver.findElement(MY_ORGANIZATION_CUSTOMER_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ROLES_CUSTOMER_SIDE_MENU_BUTTON));
         driver.findElement(ROLES_CUSTOMER_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(DEFAULT_ROLES_TITLE));
         return new CustomerRolesPage(driver);

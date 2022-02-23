@@ -21,6 +21,7 @@ public class AdminAttributesPage extends BasePage {
 
     public AdminAttributesPage clickAttributes() {
         driver.findElement(CLASSIFICATION_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ATTRIBUTES_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(ATTRIBUTES_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ATTRIBUTES_SEARCH_INPUT));
         return new AdminAttributesPage(driver);

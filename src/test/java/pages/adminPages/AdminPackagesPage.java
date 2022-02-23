@@ -21,6 +21,7 @@ public class AdminPackagesPage extends BasePage {
 
     public AdminPackagesPage clickPackages() {
         driver.findElement(USERS_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(PACKAGES_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(PACKAGES_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ADD_PACKAGE_BUTTON));
         return new AdminPackagesPage(driver);

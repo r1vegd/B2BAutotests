@@ -21,6 +21,7 @@ public class AdminUsersPage extends BasePage {
 
     public AdminUsersPage clickUsers() {
         driver.findElement(USERS_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(USER_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(USER_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(CREATE_USER_BUTTON));
         return new AdminUsersPage(driver);

@@ -21,6 +21,7 @@ public class VendorPrivateStandsPage extends BasePage {
 
     public VendorPrivateStandsPage clickPrivateStands() {
         driver.findElement(STANDS_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(PRIVATE_STANDS_VENDOR_SIDE_MENU_BUTTON));
         driver.findElement(PRIVATE_STANDS_VENDOR_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(SEARCH_PRIVATE_STANDS));
         return new VendorPrivateStandsPage(driver);

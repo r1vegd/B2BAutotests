@@ -21,6 +21,7 @@ public class AdminClassifiersPage extends BasePage {
 
     public AdminClassifiersPage clickClassifier() {
         driver.findElement(LOCALIZATION_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(CLASSIFIER_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(CLASSIFIER_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(CLASSIFIER_SEARCH_INPUT));
         return new AdminClassifiersPage(driver);

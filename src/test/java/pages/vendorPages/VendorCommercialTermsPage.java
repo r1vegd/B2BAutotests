@@ -21,6 +21,7 @@ public class VendorCommercialTermsPage extends BasePage {
 
     public VendorCommercialTermsPage clickCommercialTerms() {
         driver.findElement(MY_ORGANIZATION_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(COMMERCIAL_TERMS_VENDOR_SIDE_MENU_BUTTON));
         driver.findElement(COMMERCIAL_TERMS_VENDOR_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(SAVE_COMMERCIAL_TERMS_BUTTON));
         return new VendorCommercialTermsPage(driver);

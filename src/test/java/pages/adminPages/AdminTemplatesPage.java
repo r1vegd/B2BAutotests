@@ -21,6 +21,7 @@ public class AdminTemplatesPage extends BasePage {
 
     public AdminTemplatesPage clickTemplates() {
         driver.findElement(LOCALIZATION_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(TEMPLATES_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(TEMPLATES_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(TEMPLATES_SEARCH_INPUT));
         return new AdminTemplatesPage(driver);

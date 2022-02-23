@@ -21,6 +21,7 @@ public class VendorConditionSettingsPage extends BasePage {
 
     public VendorConditionSettingsPage clickConditionSettings() {
         driver.findElement(MY_ORGANIZATION_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(CONDITION_SETTINGS_VENDOR_SIDE_MENU_BUTTON));
         driver.findElement(CONDITION_SETTINGS_VENDOR_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(CONDITION_SETTINGS_TITLE));
         return new VendorConditionSettingsPage(driver);

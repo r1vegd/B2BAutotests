@@ -21,6 +21,7 @@ public class AdminApplicationsPage extends BasePage {
 
     public AdminApplicationsPage clickApplicationsRegistration() {
         driver.findElement(APPLICATION_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(REGISTRATION_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(REGISTRATION_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(SEARCH_BY_INPUT));
         return new AdminApplicationsPage(driver);

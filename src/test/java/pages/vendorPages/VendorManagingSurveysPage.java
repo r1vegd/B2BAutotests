@@ -21,6 +21,7 @@ public class VendorManagingSurveysPage extends BasePage {
 
     public VendorManagingSurveysPage clickManagingSurvey() {
         driver.findElement(SURVEY_MAIN_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(MANAGING_SURVEY_SIDE_MENU_BUTTON));
         driver.findElement(MANAGING_SURVEY_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ADD_NEW_SURVEY_BUTTON));
         return new VendorManagingSurveysPage(driver);

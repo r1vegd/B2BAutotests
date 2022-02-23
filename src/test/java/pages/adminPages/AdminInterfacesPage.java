@@ -21,6 +21,7 @@ public class AdminInterfacesPage extends BasePage {
 
     public AdminInterfacesPage clickInterfaces() {
         driver.findElement(LOCALIZATION_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(INTERFACES_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(INTERFACES_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(INTERFACES_SEARCH_INPUT));
         return new AdminInterfacesPage(driver);

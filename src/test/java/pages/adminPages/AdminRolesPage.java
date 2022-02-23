@@ -21,6 +21,7 @@ public class AdminRolesPage extends BasePage {
 
     public AdminRolesPage clickRoles() {
         driver.findElement(USERS_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ROLES_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(ROLES_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ADD_ROLE_BUTTON));
         return new AdminRolesPage(driver);

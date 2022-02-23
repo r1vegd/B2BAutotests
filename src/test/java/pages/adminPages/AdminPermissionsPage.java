@@ -21,6 +21,7 @@ public class AdminPermissionsPage extends BasePage {
 
     public AdminPermissionsPage clickPermissions() {
         driver.findElement(USERS_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(PERMISSIONS_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(PERMISSIONS_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ADD_PERMISSION_BUTTON));
         return new AdminPermissionsPage(driver);

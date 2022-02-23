@@ -21,6 +21,7 @@ public class VendorBannersPage extends BasePage {
 
     public VendorBannersPage clickBanners() {
         driver.findElement(LANDING_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(BANNER_CAROUSEL_SIDE_MENU_BUTTON));
         driver.findElement(BANNER_CAROUSEL_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ADD_BANNER_BUTTON));
         return new VendorBannersPage(driver);

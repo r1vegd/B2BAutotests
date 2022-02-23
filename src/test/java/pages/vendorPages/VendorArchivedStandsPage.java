@@ -21,6 +21,7 @@ public class VendorArchivedStandsPage extends BasePage {
 
     public VendorArchivedStandsPage clickArchivedStands() {
         driver.findElement(STANDS_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ARCHIVED_STANDS_VENDOR_SIDE_MENU_BUTTON));
         driver.findElement(ARCHIVED_STANDS_VENDOR_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(SEARCH_ARCHIVED_STANDS));
         return new VendorArchivedStandsPage(driver);

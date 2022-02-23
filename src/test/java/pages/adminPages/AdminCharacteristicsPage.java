@@ -21,6 +21,7 @@ public class AdminCharacteristicsPage extends BasePage {
 
     public AdminCharacteristicsPage clickCharacteristics() {
         driver.findElement(CLASSIFICATION_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(CHARACTERISTICS_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(CHARACTERISTICS_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ADD_CHARACTERISTIC_BUTTON));
         return new AdminCharacteristicsPage(driver);

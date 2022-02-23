@@ -21,6 +21,7 @@ public class AdminIndustriesPage extends BasePage {
 
     public AdminIndustriesPage clickIndustries() {
         driver.findElement(CLASSIFICATION_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(INDUSTRIES_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(INDUSTRIES_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ADD_INDUSTRY_BUTTON));
         return new AdminIndustriesPage(driver);

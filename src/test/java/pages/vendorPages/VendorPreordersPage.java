@@ -21,6 +21,7 @@ public class VendorPreordersPage extends BasePage {
 
     public VendorPreordersPage clickPreorders() {
         driver.findElement(PREORDERS_AND_ORDERS_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(PREORDERS_VENDOR_SIDE_MENU_BUTTON));
         driver.findElement(PREORDERS_VENDOR_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(PREORDERS_SHOW_BY));
         return new VendorPreordersPage(driver);

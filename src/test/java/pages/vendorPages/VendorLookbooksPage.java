@@ -21,6 +21,7 @@ public class VendorLookbooksPage extends BasePage {
 
     public VendorLookbooksPage clickLookbooks() {
         driver.findElement(LANDING_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(LOOKBOOK_SIDE_MENU_BUTTON));
         driver.findElement(LOOKBOOK_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ADD_LOOKBOOK_BUTTON));
         return new VendorLookbooksPage(driver);

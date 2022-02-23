@@ -21,6 +21,7 @@ public class AdminEmailsPage extends BasePage {
 
     public AdminEmailsPage clickEmails() {
         driver.findElement(LOCALIZATION_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(EMAILS_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(EMAILS_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(EMAILS_SEARCH_INPUT));
         return new AdminEmailsPage(driver);

@@ -21,6 +21,7 @@ public class AdminLanguagesPage extends BasePage {
 
     public AdminLanguagesPage clickLanguages() {
         driver.findElement(LOCALIZATION_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(LANGUAGES_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(LANGUAGES_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(LANGUAGES_SEARCH_INPUT));
         return new AdminLanguagesPage(driver);

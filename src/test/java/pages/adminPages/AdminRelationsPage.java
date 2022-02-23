@@ -22,6 +22,7 @@ public class AdminRelationsPage extends BasePage {
 
     public AdminRelationsPage clickRelations() {
         driver.findElement(CLASSIFICATION_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(RELATIONS_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(RELATIONS_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ADD_RELATIONS_BUTTON));
         return new AdminRelationsPage(driver);

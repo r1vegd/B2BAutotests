@@ -21,6 +21,7 @@ public class VendorOrganizationPage extends BasePage {
 
     public VendorOrganizationPage clickOrganization() {
         driver.findElement(MY_ORGANIZATION_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ORGANIZATION_VENDOR_SIDE_MENU_BUTTON));
         driver.findElement(ORGANIZATION_VENDOR_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(EDIT_ORGANIZATION_BUTTON));
         return new VendorOrganizationPage(driver);

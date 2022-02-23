@@ -21,6 +21,7 @@ public class VendorPricesPage extends BasePage {
 
     public VendorPricesPage clickPrices() {
         driver.findElement(PRICES_AND_DISCOUNTS_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(PRICES_VENDOR_SIDE_MENU_BUTTON));
         driver.findElement(PRICES_VENDOR_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ADD_PRICE_LIST_BUTTON));
         return new VendorPricesPage(driver);

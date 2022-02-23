@@ -22,6 +22,7 @@ public class AdminMeasurementUnitsPage extends BasePage {
 
     public AdminMeasurementUnitsPage clickMeasurementUnits() {
         driver.findElement(CLASSIFICATION_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(MEASUREMENT_UNITS_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(MEASUREMENT_UNITS_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ADD_UNIT_BUTTON));
         return new AdminMeasurementUnitsPage(driver);

@@ -21,6 +21,7 @@ public class CustomerOrdersPage extends BasePage {
 
     public CustomerOrdersPage clickOrders() {
         driver.findElement(PREORDERS_AND_ORDERS_CUSTOMER_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ORDERS_CUSTOMER_SIDE_MENU_BUTTON));
         driver.findElement(ORDERS_CUSTOMER_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(ORDERS_TITLE));
         return new CustomerOrdersPage(driver);

@@ -21,6 +21,7 @@ public class VendorRolesPage extends BasePage {
 
     public VendorRolesPage clickRoles() {
         driver.findElement(MY_ORGANIZATION_VENDOR_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ROLES_VENDOR_SIDE_MENU_BUTTON));
         driver.findElement(ROLES_VENDOR_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ADD_ROLE_BUTTON));
         return new VendorRolesPage(driver);

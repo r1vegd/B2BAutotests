@@ -21,6 +21,7 @@ public class AdminCategoriesPage extends BasePage {
 
     public AdminCategoriesPage clickCategories() {
         driver.findElement(CLASSIFICATION_ADMIN_SIDE_MENU_BUTTON).click();
+        wait.until(ExpectedConditions.elementToBeClickable(CATEGORIES_ADMIN_SIDE_MENU_BUTTON));
         driver.findElement(CATEGORIES_ADMIN_SIDE_MENU_BUTTON).click();
         wait.until(ExpectedConditions.elementToBeClickable(ADD_CATEGORY_BUTTON));
         return new AdminCategoriesPage(driver);
